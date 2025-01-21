@@ -84,34 +84,37 @@ export const Login = () => {
       return;
     }
 
-    try {
-      // let url = "http://16.171.166.192/auth/login";
+    const obj = {
+      email: "abdul saboor",
+    };
 
-      // const config = {
-      //     headers: {
-      //         'Content-Type': 'application/json'
-      //     },
-      // };
+    dispatch(setUser(obj));
+    navigate("/dashboard");
 
-      // const body = {
-      //     "email": email,
-      //     "password": password
-      // }
-
-      // if(email != "" && password != "") {
-      //     const response = await axios.post(url,body,config);
-      //     const userDetails = response.data;
-      //     dispatch(setUser(userDetails));
-      // }
-      navigate("/dashboard");
-    } catch (error) {
-      console.error(error);
-      setEmailEmpty(true);
-      setPasswordEmpty(true);
-      setEmail("");
-      setPassword("");
-      setErrorMessage("Please enter correct login credentials");
-    }
+    // try {
+    //   // let url = "http://16.171.166.192/auth/login";
+    //   // const config = {
+    //   //     headers: {
+    //   //         'Content-Type': 'application/json'
+    //   //     },
+    //   // };
+    //   // const body = {
+    //   //     "email": email,
+    //   //     "password": password
+    //   // }
+    //   // if(email != "" && password != "") {
+    //   //     const response = await axios.post(url,body,config);
+    //   //     const userDetails = response.data;
+    //   //     dispatch(setUser(userDetails));
+    //   // }
+    // } catch (error) {
+    //   console.error(error);
+    //   setEmailEmpty(true);
+    //   setPasswordEmpty(true);
+    //   setEmail("");
+    //   setPassword("");
+    //   setErrorMessage("Please enter correct login credentials");
+    // }
   };
 
   const EnterKeyPress = (e) => {
